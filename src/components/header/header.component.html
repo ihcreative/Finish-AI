@@ -1,0 +1,42 @@
+<header class="bg-[#FDFBF8]/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a (click)="closeMobileMenu()" routerLink="/" class="text-2xl font-bold text-stone-800 hover:text-green-500 transition-colors">
+      Last Mile AI
+    </a>
+    
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button (click)="toggleMobileMenu()" class="text-stone-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          @if (!isMobileMenuOpen()) {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          } @else {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          }
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a routerLink="/" routerLinkActive="text-green-500 font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-stone-600 hover:text-green-500 transition-colors">Home</a>
+      <a routerLink="/pricing" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">Pricing</a>
+      <a routerLink="/faq" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">FAQ</a>
+      <a routerLink="/about" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">About</a>
+      <a routerLink="/intake" class="bg-green-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-green-600 transition-all shadow-sm hover:shadow-md">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  @if (isMobileMenuOpen()) {
+    <div class="md:hidden absolute top-full left-0 w-full bg-[#FDFBF8] border-b border-stone-200 shadow-lg">
+      <div class="flex flex-col items-center space-y-4 py-6">
+        <a (click)="closeMobileMenu()" routerLink="/" routerLinkActive="text-green-500 font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-stone-600 hover:text-green-500 transition-colors">Home</a>
+        <a (click)="closeMobileMenu()" routerLink="/pricing" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">Pricing</a>
+        <a (click)="closeMobileMenu()" routerLink="/faq" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">FAQ</a>
+        <a (click)="closeMobileMenu()" routerLink="/about" routerLinkActive="text-green-500 font-semibold" class="text-stone-600 hover:text-green-500 transition-colors">About</a>
+        <a (click)="closeMobileMenu()" routerLink="/intake" class="bg-green-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition-all shadow-sm hover:shadow-md w-4/5 text-center">Get Started</a>
+      </div>
+    </div>
+  }
+</header>
