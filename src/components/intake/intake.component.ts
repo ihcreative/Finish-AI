@@ -11,15 +11,12 @@ import { CommonModule } from '@angular/common';
 export class IntakeComponent {
   formSubmitted = signal(false);
 
-  // FIX: Replaced FormBuilder with direct instantiation of FormGroup and FormControl
-  // to resolve a TypeScript error where `this.fb.group` was causing a type error.
-  // This approach is functionally equivalent and avoids the injection-related type issue.
   intakeForm = new FormGroup({
     fullName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    repoLink: new FormControl(''),
-    projectGoal: new FormControl('', [Validators.required, Validators.minLength(20)]),
-    budget: new FormControl('', Validators.required),
+    whatsBroken: new FormControl('', Validators.required),
+    projectLink: new FormControl(''),
+    deadline: new FormControl(''),
   });
 
   onSubmit() {
