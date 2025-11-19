@@ -1,58 +1,72 @@
 <div class="container mx-auto px-6 py-16">
   <div class="max-w-3xl mx-auto text-center mb-16">
     <h1 class="text-4xl font-bold text-stone-800">Pricing that gets you to the finish line.</h1>
-    <p class="text-lg text-stone-600 mt-4">Simple plans to complete your project and get you to market, fast.</p>
+    <p class="text-lg text-stone-600 mt-4">
+      Simple plans to take your AI-built app from 80% done to launched, fast.
+    </p>
   </div>
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-    
-    <!-- Tier 1: Project -->
+
+    <!-- Tier 1: DIY Fix Call -->
     <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-100 flex flex-col">
-      <h2 class="text-2xl font-semibold text-stone-800">Code Completion</h2>
-      <p class="text-stone-500 mt-2 mb-6">Perfect for finishing a single feature or fixing critical bugs.</p>
-      <p class="text-4xl font-bold text-stone-800 mb-6">$5,000+</p>
+      <h2 class="text-2xl font-semibold text-stone-800">DIY Fix Call</h2>
+      <p class="text-stone-500 mt-2 mb-6">
+        1-on-1 working session to debug your app and get you unstuck.
+      </p>
+      <p class="text-4xl font-bold text-stone-800 mb-6">$300</p>
       <ul class="space-y-3 text-stone-600 mb-8 flex-grow">
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Fixed Scope Project</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>AI Code Generation</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Human Code Review</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full QA & Testing</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>60-minute live call</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Targeted debugging + fixes</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Clear next steps to ship</li>
       </ul>
-      <a routerLink="/intake" class="mt-auto w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">
+      <a routerLink="/intake"
+         class="mt-auto w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">
+        Book Now
+      </a>
+    </div>
+
+    <!-- Tier 2: We Finish It -->
+    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-green-500 flex flex-col relative">
+      <p class="absolute top-0 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+        MOST POPULAR
+      </p>
+      <h2 class="text-2xl font-semibold text-stone-800">We Finish It</h2>
+      <p class="text-stone-500 mt-2 mb-6">
+        We take over your app, fix the last mile, and deliver a production-ready launch.
+      </p>
+      <p class="text-4xl font-bold text-stone-800 mb-2">$2,500+</p>
+      <p class="text-sm text-stone-500 mb-6">Most projects land between $2,500–$7,500.</p>
+      <ul class="space-y-3 text-stone-600 mb-8 flex-grow">
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Payments, auth, database wired up</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Logic stabilized + bugs fixed</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Hosting + domain + deployment</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>QA pass and launch support</li>
+      </ul>
+      <a routerLink="/intake"
+         class="mt-auto w-full text-center bg-green-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-green-600 transition-all shadow-md">
         Get a Quote
       </a>
     </div>
 
-    <!-- Tier 2: Retainer -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-green-500 flex flex-col relative">
-      <p class="absolute top-0 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</p>
-      <h2 class="text-2xl font-semibold text-stone-800">Full-Stack AI</h2>
-      <p class="text-stone-500 mt-2 mb-6">For completing your entire MVP and getting it launch-ready.</p>
-      <p class="text-4xl font-bold text-stone-800 mb-6">$10,000<span class="text-lg font-normal text-stone-500">/mo</span></p>
+    <!-- Tier 3: Revenue Share -->
+    <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-100 flex flex-col">
+      <h2 class="text-2xl font-semibold text-stone-800">Revenue Share</h2>
+      <p class="text-stone-500 mt-2 mb-6">
+        For high-potential ideas where we become your technical launch partner.
+      </p>
+      <p class="text-4xl font-bold text-stone-800 mb-2">$0</p>
+      <p class="text-sm text-stone-500 mb-6">We earn a % of early revenue instead of large upfront fees.</p>
       <ul class="space-y-3 text-stone-600 mb-8 flex-grow">
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Dedicated AI + Human Team</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Flexible Task Queue</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Weekly Strategy Calls</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority Support</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>We finish + deploy your app</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Shared upside on launch performance</li>
+        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Best for strong market proof</li>
       </ul>
-      <a routerLink="/intake" class="mt-auto w-full text-center bg-green-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-green-600 transition-all shadow-md">
-        Get Started
+      <a routerLink="/intake"
+         class="mt-auto w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">
+        Apply for Partnership
       </a>
     </div>
 
-    <!-- Tier 3: Enterprise -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-100 flex flex-col">
-      <h2 class="text-2xl font-semibold text-stone-800">Dedicated AI Team</h2>
-      <p class="text-stone-500 mt-2 mb-6">For complex applications requiring a dedicated AI and human team.</p>
-      <p class="text-4xl font-bold text-stone-800 mb-6">Custom</p>
-      <ul class="space-y-3 text-stone-600 mb-8 flex-grow">
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multiple AI Pods</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Architectural Consulting</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>24/7 Support SLA</li>
-        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Private Model Training</li>
-      </ul>
-      <a routerLink="/intake" class="mt-auto w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">
-        Contact Us
-      </a>
-    </div>
   </div>
 </div>
