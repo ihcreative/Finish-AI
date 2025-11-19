@@ -1,34 +1,147 @@
-<div class="container mx-auto px-6 py-16 md:py-24 text-center">
+<!-- 1. Hero Section -->
+<section class="container mx-auto px-6 py-20 md:py-32 text-center">
   <div class="max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-6xl font-bold text-stone-800 leading-tight mb-6">
-      We finish what you started. Your vision, realized by AI.
+    <h1 class="text-5xl md:text-7xl font-extrabold text-stone-900 leading-tight tracking-tighter mb-6">
+      Your App. Actually Finished.
     </h1>
-    <p class="text-lg md:text-xl text-stone-600 mb-10">
-      We are an AI-powered development service that takes your unfinished vibe projects and brings them to life, completing the last mile of your development journey.
+    <p class="text-lg md:text-xl text-stone-600 mb-10 max-w-2xl mx-auto">
+      We turn half-built AI apps into working, production-ready products in 24–72 hours.
     </p>
-    <a routerLink="/intake" class="bg-green-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-600 transition-all shadow-md hover:shadow-lg text-lg inline-block">
-      Complete My App
-    </a>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#" class="bg-emerald-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg text-lg inline-block">
+        Book a Fix Call
+      </a>
+      <a href="#pricing" class="bg-white text-emerald-600 border border-emerald-300 font-semibold px-8 py-4 rounded-lg hover:bg-emerald-50 transition-all text-lg inline-block">
+        See Pricing
+      </a>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="container mx-auto px-6 py-16">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-stone-800">How It Works</h2>
-        <p class="text-stone-600 mt-2 max-w-2xl mx-auto">Our process is designed for speed, quality, and getting your project across the finish line.</p>
+<!-- 2. Pain Section -->
+<section class="bg-white py-20 md:py-24">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-stone-800 mb-12">The Last Mile Is Broken.</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+        <div class="bg-stone-50 p-6 rounded-lg text-center">
+            <p class="font-semibold text-stone-700">Deploy fails</p>
+        </div>
+        <div class="bg-stone-50 p-6 rounded-lg text-center">
+            <p class="font-semibold text-stone-700">Auth breaks</p>
+        </div>
+        <div class="bg-stone-50 p-6 rounded-lg text-center">
+            <p class="font-semibold text-stone-700">Stripe is confusing</p>
+        </div>
+        <div class="bg-stone-50 p-6 rounded-lg text-center">
+            <p class="font-semibold text-stone-700">No debugging</p>
+        </div>
+        <div class="bg-stone-50 p-6 rounded-lg text-center col-span-2 md:col-span-1 lg:col-span-1">
+            <p class="font-semibold text-stone-700">Stuck at 80%</p>
+        </div>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 text-center">
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
-            <h3 class="text-xl font-semibold text-stone-800 mb-3">1. Code Analysis</h3>
-            <p class="text-stone-600">We start by analyzing your existing codebase, understanding your original vision, and identifying the gaps.</p>
+  </div>
+</section>
+
+<!-- 3. Finish vs AI Builders Comparison -->
+<section class="container mx-auto px-6 py-20 md:py-24">
+    <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div class="bg-rose-50 border-l-4 border-rose-300 p-8 rounded-r-lg">
+            <h3 class="text-2xl font-bold text-rose-800 mb-3">The 80% Problem</h3>
+            <p class="text-rose-700">AI builders are great for getting a prototype up quickly. But they leave you stranded when it comes to the complex, critical details needed to actually launch.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
-            <h3 class="text-xl font-semibold text-stone-800 mb-3">2. AI-Powered Development</h3>
-            <p class="text-stone-600">Our AI models complete the code, fix bugs, and implement features, while our human experts ensure quality and alignment.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
-            <h3 class="text-xl font-semibold text-stone-800 mb-3">3. Delivery & Launch</h3>
-            <p class="text-stone-600">We deliver a production-ready application and offer ongoing support to maintain and enhance your project.</p>
+        <div class="bg-emerald-50 border-l-4 border-emerald-400 p-8 rounded-r-lg">
+            <h3 class="text-2xl font-bold text-emerald-800 mb-3">The 20% Solution</h3>
+            <p class="text-emerald-700">Finish handles the final, crucial 20%. We fix the broken parts, integrate services, and deploy your app so it works flawlessly in production for real users.</p>
         </div>
     </div>
-</div>
+</section>
+
+<!-- 4. Services Section -->
+<section id="pricing" class="bg-white py-20 md:py-24">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto grid lg:grid-cols-3 gap-8">
+      
+      <!-- DIY Fix Call -->
+      <div class="border border-stone-200 p-8 rounded-xl flex flex-col">
+        <h3 class="text-2xl font-bold text-stone-800 mb-2">DIY Fix Call</h3>
+        <p class="text-stone-600 mb-4 flex-grow">A 1-on-1 call with an expert to debug your app and get you unstuck.</p>
+        <p class="text-3xl font-bold text-stone-900 mb-6">$300</p>
+        <a href="#" class="w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">Book Now</a>
+      </div>
+
+      <!-- We Finish It -->
+      <div class="border-2 border-emerald-500 p-8 rounded-xl flex flex-col relative shadow-xl">
+         <p class="absolute top-0 -translate-y-1/2 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</p>
+        <h3 class="text-2xl font-bold text-stone-800 mb-2">We Finish It</h3>
+        <p class="text-stone-600 mb-4 flex-grow">We take your project, fix everything, and deliver a production-ready app.</p>
+        <p class="text-3xl font-bold text-stone-900 mb-6">$2,500+</p>
+        <a href="#" class="w-full text-center bg-emerald-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-emerald-600 transition-all">Get a Quote</a>
+      </div>
+
+      <!-- Revenue Share -->
+      <div class="border border-stone-200 p-8 rounded-xl flex flex-col">
+        <h3 class="text-2xl font-bold text-stone-800 mb-2">Revenue Share</h3>
+        <p class="text-stone-600 mb-4 flex-grow">For promising projects, we'll finish your app in exchange for a share of future revenue.</p>
+        <p class="text-3xl font-bold text-stone-900 mb-6">Partnership</p>
+        <a href="#" class="w-full text-center bg-stone-100 text-stone-700 font-semibold py-3 px-4 rounded-lg hover:bg-stone-200 transition-all">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5. How It Works -->
+<section class="container mx-auto px-6 py-20 md:py-24">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-stone-800">How It Works</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 text-center max-w-5xl mx-auto">
+        <div class="p-8">
+            <div class="text-3xl font-bold text-emerald-500 mb-4">1</div>
+            <h3 class="text-xl font-semibold text-stone-800 mb-3">Upload your project</h3>
+            <p class="text-stone-600">Share your Git repo and tell us what's broken and what your goals are.</p>
+        </div>
+        <div class="p-8">
+            <div class="text-3xl font-bold text-emerald-500 mb-4">2</div>
+            <h3 class="text-xl font-semibold text-stone-800 mb-3">We diagnose</h3>
+            <p class="text-stone-600">Our team analyzes your code, creates a fix-list, and gives you a firm timeline.</p>
+        </div>
+        <div class="p-8">
+            <div class="text-3xl font-bold text-emerald-500 mb-4">3</div>
+            <h3 class="text-xl font-semibold text-stone-800 mb-3">You get a production-ready app</h3>
+            <p class="text-stone-600">We deliver a fully-functional, deployed application ready for users.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Proof / Social Trust -->
+<section class="bg-white py-20 md:py-24">
+    <div class="container mx-auto px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold text-stone-800 mb-8">"This is the service I wish I had a year ago. I went from a broken prototype to a launched product in 48 hours."</h2>
+            <p class="text-stone-600 font-semibold">— Early User</p>
+        </div>
+        <div class="mt-12">
+            <p class="text-sm uppercase font-bold tracking-widest text-stone-500">Trusted by founders in Kenya, Indonesia, and the US</p>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Why Now -->
+<section class="container mx-auto px-6 py-20 md:py-24">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-stone-800 leading-tight mb-6">Millions of AI-generated apps are being created. Millions are getting stuck.</h2>
+    <p class="text-lg text-stone-600">The generative era needs a new infrastructure layer to turn promising ideas into launched businesses. Finish is that layer. We provide the human expertise to get AI-generated code over the finish line, unlocking a new wave of innovation.</p>
+  </div>
+</section>
+
+
+<!-- 8. Call to action footer -->
+<footer class="bg-stone-900 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to launch your app?</h2>
+        <a href="#" class="bg-emerald-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-emerald-600 transition-all shadow-lg hover:shadow-emerald-500/30 text-lg inline-block">
+            Start Here
+        </a>
+    </div>
+</footer>

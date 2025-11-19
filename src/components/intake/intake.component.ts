@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,15 +9,17 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IntakeComponent {
-  private fb = inject(FormBuilder);
   formSubmitted = signal(false);
 
-  intakeForm = this.fb.group({
-    fullName: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    repoLink: [''],
-    projectGoal: ['', [Validators.required, Validators.minLength(20)]],
-    budget: ['', Validators.required],
+  // FIX: Replaced FormBuilder with direct instantiation of FormGroup and FormControl
+  // to resolve a TypeScript error where `this.fb.group` was causing a type error.
+  // This approach is functionally equivalent and avoids the injection-related type issue.
+  intakeForm = new FormGroup({
+    fullName: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    repoLink: new FormControl(''),
+    projectGoal: new FormControl('', [Validators.required, Validators.minLength(20)]),
+    budget: new FormControl('', Validators.required),
   });
 
   onSubmit() {

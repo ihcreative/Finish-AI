@@ -1,5 +1,5 @@
 {
-  "name": "Last Mile AI",
-  "description": "An AI-powered development service to complete your unfinished web applications. Built with Angular and styled with Tailwind CSS.",
+  "name": "Finish",
+  "description": "Finish is a last-mile app-completion service. We take half-built AI or no-code apps and finish them so they can launch.",
   "requestFramePermissions": []
 }
