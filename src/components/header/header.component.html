@@ -9,8 +9,15 @@
       <span class="text-2xl font-extrabold tracking-tight">Finish</span>
     </a>
     
+    <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/" routerLinkActive="text-emerald-600 font-semibold" [routerLinkActiveOptions]="{exact: true}" class="text-stone-600 hover:text-emerald-600 transition-colors">Home</a>
+        <a routerLink="/how-it-works" routerLinkActive="text-emerald-600 font-semibold" class="text-stone-600 hover:text-emerald-600 transition-colors">How It Works</a>
+        <a routerLink="/pricing" routerLinkActive="text-emerald-600 font-semibold" class="text-stone-600 hover:text-emerald-600 transition-colors">Pricing</a>
+        <a routerLink="/why-finish" routerLinkActive="text-emerald-600 font-semibold" class="text-stone-600 hover:text-emerald-600 transition-colors">Why Finish</a>
+    </div>
+
     <div class="flex items-center">
-      <a href="#" class="bg-emerald-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-emerald-600 transition-all shadow-sm hover:shadow-md">
+      <a routerLink="/intake" class="bg-emerald-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-emerald-600 transition-all shadow-sm hover:shadow-md">
         Book a Fix Call
       </a>
     </div>
