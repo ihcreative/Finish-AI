@@ -14,7 +14,7 @@ export class IntakeComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     vibeApp: new FormControl('', Validators.required),
     whatsBroken: new FormControl('', Validators.required),
-    projectLink: new FormControl(''),
+    projectLink: new FormControl('', Validators.required),
     deadline: new FormControl(''),
   });
 
