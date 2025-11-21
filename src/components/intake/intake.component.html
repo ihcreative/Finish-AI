@@ -1,59 +1,117 @@
 <div class="container mx-auto px-6 py-16">
-  <div class="max-w-2xl mx-auto">
-    <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-stone-800">Let's finish your app.</h1>
-      <p class="text-lg text-stone-600 mt-4">Tell us what’s broken. We’ll tell you what it takes to get it shipped.</p>
-    </div>
 
-    @if (formSubmitted()) {
-      <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-6 rounded-lg text-center shadow-md">
-        <h2 class="text-2xl font-semibold mb-2">Thank You!</h2>
-        <p>Your project details have been received. We'll be in touch within 24 hours with next steps.</p>
+  <!-- Title Block -->
+  <div class="max-w-3xl mx-auto text-left">
+    <h1 class="text-4xl font-bold text-stone-800 mb-4 text-left">
+      Let's finish your app.
+    </h1>
+    <p class="text-stone-600 mb-16">
+      Tell us what’s broken. We’ll tell you what it takes to get it shipped.
+    </p>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <form [formGroup]="intakeForm"
+      action="https://formspree.io/f/isaakhayes@gmail.com"
+      method="POST"
+      class="space-y-6 bg-white p-8 md:p-10 rounded-xl shadow-lg border border-stone-100">
+
+      <!-- Full Name -->
+      <div>
+        <label for="fullName" class="block text-sm font-medium text-stone-700">Full Name</label>
+        <input type="text" id="fullName" formControlName="fullName"
+          name="fullName"
+          class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
+          [class.border-red-500]="isInvalid('fullName')"
+          [class.border-stone-300]="!isInvalid('fullName')">
+        @if (isInvalid('fullName')) {
+          <p class="mt-1 text-sm text-red-600">Your name is required.</p>
+        }
       </div>
-    } @else {
-      <form [formGroup]="intakeForm" (ngSubmit)="onSubmit()" class="space-y-6 bg-white p-8 md:p-10 rounded-xl shadow-lg border border-stone-100">
-        
-        <div>
-          <label for="fullName" class="block text-sm font-medium text-stone-700">Full Name</label>
-          <input type="text" id="fullName" formControlName="fullName" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500" [class.border-red-500]="isInvalid('fullName')" [class.border-stone-300]="!isInvalid('fullName')">
-          @if (isInvalid('fullName')) {
-            <p class="mt-1 text-sm text-red-600">Your name is required.</p>
-          }
-        </div>
 
-        <div>
-          <label for="email" class="block text-sm font-medium text-stone-700">Email Address</label>
-          <input type="email" id="email" formControlName="email" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500" [class.border-red-500]="isInvalid('email')" [class.border-stone-300]="!isInvalid('email')">
-          @if (isInvalid('email')) {
-            <p class="mt-1 text-sm text-red-600">A valid email is required.</p>
-          }
-        </div>
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-stone-700">Email Address</label>
+        <input type="email" id="email" formControlName="email"
+          name="email"
+          class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
+          [class.border-red-500]="isInvalid('email')"
+          [class.border-stone-300]="!isInvalid('email')">
+        @if (isInvalid('email')) {
+          <p class="mt-1 text-sm text-red-600">A valid email is required.</p>
+        }
+      </div>
 
-        <div>
-          <label for="whatsBroken" class="block text-sm font-medium text-stone-700">What’s broken?</label>
-          <textarea id="whatsBroken" formControlName="whatsBroken" rows="5" placeholder="Describe the problem, what you've tried, and what 'done' looks like..." class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500" [class.border-red-500]="isInvalid('whatsBroken')" [class.border-stone-300]="!isInvalid('whatsBroken')"></textarea>
-          @if (isInvalid('whatsBroken')) {
-            <p class="mt-1 text-sm text-red-600">Please describe what's broken.</p>
-          }
-        </div>
+      <!-- Vibe App Dropdown -->
+      <div>
+        <label for="vibeApp" class="block text-sm font-medium text-stone-700">Which app builder did you use?</label>
+        <select id="vibeApp" formControlName="vibeApp" name="vibeApp"
+          class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+          [class.border-red-500]="isInvalid('vibeApp')"
+          [class.border-stone-300]="!isInvalid('vibeApp')">
+          <option value="" disabled>Select an option</option>
+          <option value="Bubble">Bubble</option>
+          <option value="FlutterFlow">FlutterFlow</option>
+          <option value="Webflow">Webflow</option>
+          <option value="Replit">Replit</option>
+          <option value="Lovable">Lovable</option>
+          <option value="Google AI Studio">Google AI Studio</option>
+          <option value="v0.dev">v0.dev</option>
+          <option value="Bolt.new">Bolt.new</option>
+          <option value="Adalo">Adalo</option>
+          <option value="Softr">Softr</option>
+          <option value="Glide">Glide</option>
+          <option value="Framer">Framer</option>
+          <option value="Custom Code">Custom Code</option>
+          <option value="Other">Other</option>
+        </select>
+        @if (isInvalid('vibeApp')) {
+          <p class="mt-1 text-sm text-red-600">Please select the app builder you used.</p>
+        }
+      </div>
 
-        <div>
-          <label for="projectLink" class="block text-sm font-medium text-stone-700">Project Link (Optional)</label>
-          <input type="text" id="projectLink" formControlName="projectLink" placeholder="https://github.com/your/project" class="mt-1 block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
-        </div>
+      <!-- What's Broken -->
+      <div>
+        <label for="whatsBroken" class="block text-sm font-medium text-stone-700">What’s broken?</label>
+        <textarea id="whatsBroken" formControlName="whatsBroken"
+          name="whatsBroken"
+          rows="5"
+          placeholder="Describe the problem, what you've tried, and what 'done' looks like..."
+          class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500"
+          [class.border-red-500]="isInvalid('whatsBroken')"
+          [class.border-stone-300]="!isInvalid('whatsBroken')"></textarea>
+        @if (isInvalid('whatsBroken')) {
+          <p class="mt-1 text-sm text-red-600">Please describe what's broken.</p>
+        }
+      </div>
 
-        <div>
-          <label for="deadline" class="block text-sm font-medium text-stone-700">Deadline (Optional)</label>
-          <input type="text" id="deadline" formControlName="deadline" placeholder="e.g., 'Next Friday' or 'ASAP'" class="mt-1 block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
-        </div>
-        
-        <div>
-          <button type="submit" class="w-full bg-emerald-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-            Submit Project for Analysis
-          </button>
-        </div>
+      <!-- Project Link -->
+      <div>
+        <label for="projectLink" class="block text-sm font-medium text-stone-700">Project Link (Optional)</label>
+        <input type="text" id="projectLink" formControlName="projectLink"
+          name="projectLink"
+          placeholder="https://github.com/your/project"
+          class="mt-1 block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
+      </div>
 
-      </form>
-    }
+      <!-- Deadline -->
+      <div>
+        <label for="deadline" class="block text-sm font-medium text-stone-700">Deadline (Optional)</label>
+        <input type="text" id="deadline" formControlName="deadline"
+          name="deadline"
+          placeholder="e.g., ‘Next Friday’ or ‘ASAP’"
+          class="mt-1 block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500">
+      </div>
+
+      <!-- Submit -->
+      <div>
+        <button type="submit"
+          [disabled]="intakeForm.invalid"
+          class="w-full bg-emerald-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:bg-stone-400 disabled:cursor-not-allowed">
+          Submit Project for Analysis
+        </button>
+      </div>
+
+    </form>
   </div>
 </div>

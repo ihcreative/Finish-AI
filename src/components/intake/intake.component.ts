@@ -9,30 +9,52 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IntakeComponent {
-  formSubmitted = signal(false);
-
   intakeForm = new FormGroup({
     fullName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
+    vibeApp: new FormControl('', Validators.required),
     whatsBroken: new FormControl('', Validators.required),
     projectLink: new FormControl(''),
     deadline: new FormControl(''),
   });
 
-  onSubmit() {
-    if (this.intakeForm.valid) {
-      console.log('Form Submitted', this.intakeForm.value);
-      this.formSubmitted.set(true);
-      // Here you would typically send the data to a server
-    } else {
-      console.log('Form is invalid');
-      // Mark all fields as touched to show validation errors
-      this.intakeForm.markAllAsTouched();
-    }
-  }
+  submissionStatus = signal<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  
+  // !! IMPORTANT !! Replace with your actual Google Apps Script Web App URL from deployment
+  private readonly googleAppsScriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL_HERE';
 
   isInvalid(controlName: string): boolean {
     const control = this.intakeForm.get(controlName);
     return !!control && control.invalid && (control.dirty || control.touched);
+  }
+
+  async onSubmit(): Promise<void> {
+    if (this.intakeForm.invalid) {
+      this.intakeForm.markAllAsTouched();
+      return;
+    }
+
+    this.submissionStatus.set('submitting');
+
+    try {
+      // We must use 'no-cors' mode for a simple client-side POST to a Google Apps Script.
+      // This means we cannot read the response body to confirm success from the script,
+      // but we can catch network errors. We optimistically assume success if no error is thrown.
+      await fetch(this.googleAppsScriptUrl, {
+        method: 'POST',
+        body: JSON.stringify(this.intakeForm.value),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors', 
+      });
+      
+      this.submissionStatus.set('success');
+      this.intakeForm.reset();
+
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      this.submissionStatus.set('error');
+    }
   }
 }
