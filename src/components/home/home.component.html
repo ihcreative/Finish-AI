@@ -33,24 +33,67 @@
       AI gets you to 80% — then leaves you stuck.
     </p>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">Deployment fails</p>
+      
+      <!-- Card 1: Won't Launch -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Won't Launch</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">Your app works locally but crashes or won't start on a real server.</p>
+        </div>
       </div>
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">Auth loops</p>
+
+      <!-- Card 2: Login Breaks -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Login Breaks</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">Users can't sign up or log in, getting stuck in loops or seeing errors.</p>
+        </div>
       </div>
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">Stripe breaks</p>
+
+      <!-- Card 3: Payments Fail -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Payments Fail</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">Your Stripe connection doesn't work with real money, blocking all sales.</p>
+        </div>
       </div>
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">Databases misfire</p>
+
+      <!-- Card 4: Data Glitches -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Data Glitches</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">Information won't save correctly, or the wrong data shows up for users.</p>
+        </div>
       </div>
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">No debugging</p>
+
+      <!-- Card 5: Mysterious Bugs -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Mysterious Bugs</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">Things break for no clear reason, and there are no logs to tell you why.</p>
+        </div>
       </div>
-      <div class="bg-stone-50 p-6 rounded-lg text-center">
-        <p class="font-semibold text-stone-700">Stuck at 80%</p>
+      
+      <!-- Card 6: Can't Finish -->
+      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
+        <div class="transition-opacity duration-300 group-hover:opacity-0">
+          <p class="font-semibold text-stone-700">Can't Finish</p>
+        </div>
+        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p class="text-white text-sm leading-tight">The main features are done, but you're stuck on the final details needed to go live.</p>
+        </div>
       </div>
+
     </div>
     <p class="mt-8 text-stone-600 font-semibold">
       AI can scaffold your app. It can’t ship your app.
