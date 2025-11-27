@@ -10,18 +10,25 @@ import { CommonModule } from '@angular/common';
 })
 export class IntakeComponent {
   intakeForm = new FormGroup({
+    // Contact Info
     fullName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    vibeApp: new FormControl('', Validators.required),
-    whatsBroken: new FormControl('', Validators.required),
-    projectLink: new FormControl('', Validators.required),
-    deadline: new FormControl(''),
+    
+    // Diagnostic Questions
+    appPurpose: new FormControl('', Validators.required),
+    targetAudience: new FormControl('', Validators.required),
+    techStack: new FormControl('', Validators.required),
+    problemDescription: new FormControl('', Validators.required),
+    solutionsTried: new FormControl('', Validators.required),
+    repoLink: new FormControl('', Validators.required),
+    loomLink: new FormControl(''), // Optional
+    timeline: new FormControl(''), // Optional
+    successDefinition: new FormControl('', Validators.required),
   });
 
   submissionStatus = signal<'idle' | 'submitting' | 'success' | 'error'>('idle');
   
-  // !! IMPORTANT !! Replace with your actual Google Apps Script Web App URL from deployment
-  private readonly googleAppsScriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL_HERE';
+  private readonly formEndpointUrl = 'https://formspree.io/f/mldzvqyz';
 
   isInvalid(controlName: string): boolean {
     const control = this.intakeForm.get(controlName);
@@ -37,23 +44,24 @@ export class IntakeComponent {
     this.submissionStatus.set('submitting');
 
     try {
-      // We must use 'no-cors' mode for a simple client-side POST to a Google Apps Script.
-      // This means we cannot read the response body to confirm success from the script,
-      // but we can catch network errors. We optimistically assume success if no error is thrown.
-      await fetch(this.googleAppsScriptUrl, {
+      const response = await fetch(this.formEndpointUrl, {
         method: 'POST',
         body: JSON.stringify(this.intakeForm.value),
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        mode: 'no-cors', 
       });
       
-      this.submissionStatus.set('success');
-      this.intakeForm.reset();
+      if (response.ok) {
+        this.submissionStatus.set('success');
+        this.intakeForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
 
     } catch (error) {
-      console.error('Form submission failed:', error);
+      console.error('An error occurred during form submission:', error);
       this.submissionStatus.set('error');
     }
   }

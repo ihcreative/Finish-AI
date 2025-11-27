@@ -24,7 +24,7 @@ export class FaqComponent {
     },
     {
       question: 'What if I don\'t have any code yet?',
-      answer: 'Finish is a last-mile service, so our focus is on completing existing projects that are at least 70-80% complete. We don\'t typically build applications from scratch.'
+      answer: 'FINISH is a last-mile service, so our focus is on completing existing projects that are at least 70-80% complete. We don\'t typically build applications from scratch.'
     },
     {
       question: 'Who owns the intellectual property?',
