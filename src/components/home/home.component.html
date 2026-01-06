@@ -1,251 +1,417 @@
-<!-- 1. Hero Section -->
-<section class="container mx-auto px-6 py-20 md:py-32 text-center">
+<!-- 1) Hero -->
+<section class="container mx-auto px-6 py-24 md:py-40">
   <div class="max-w-3xl mx-auto">
-    <h1 class="text-5xl md:text-7xl font-extrabold text-stone-900 leading-tight tracking-tighter mb-6">
+    <p class="text-slate-600 mb-4">
+      FINISH is the last-mile app finishing and deployment service.
+    </p>
+
+    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight tracking-tighter mb-6">
       Your App. Actually Finished.
     </h1>
-    <p class="text-lg md:text-xl text-stone-600 mb-10 max-w-2xl mx-auto">
-      We take AI-built or no-code apps stuck at 80% and ship them to production, often in 24-72 hours.
+
+    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl">
+      We take AI-built, no-code, or custom apps stuck at 80% and ship them to production, often in 24–72 hours.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+    <div class="flex flex-col sm:flex-row gap-4">
       <a
         routerLink="/intake"
-        class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg text-lg inline-block"
+        class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-transform hover:scale-105"
       >
-        Get a 24-Hour Turnaround Quote
+        Get a 24-hour turnaround quote
       </a>
       <a
-        routerLink="/pricing"
-        class="bg-white text-emerald-600 border border-emerald-300 font-semibold px-8 py-4 rounded-lg hover:bg-emerald-50 transition-all text-lg inline-block"
+        routerLink="/how-it-works"
+        class="bg-white hover:bg-slate-50 text-slate-700 font-semibold px-8 py-4 rounded-lg text-lg inline-block border border-slate-200"
       >
-        See Pricing
+        How FINISH works
       </a>
     </div>
-  </div>
-</section>
 
-<!-- 2. Pain Section -->
-<section class="bg-white py-20 md:py-24">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-stone-800 mb-4">The Last Mile Is Broken.</h2>
-    <p class="text-lg md:text-xl text-stone-600 mb-10 max-w-2xl mx-auto">
-      We've seen the same pattern with hundreds of founders:
-      AI gets you to 80% — then leaves you stuck.
+    <p class="text-sm text-slate-500 mt-6">
+      If you have a repo or a link and a clear goal, we can move fast.
     </p>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
-      
-      <!-- Card 1: Won't Launch -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Won't Launch</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">Your app works locally but crashes or won't start on a real server.</p>
-        </div>
-      </div>
-
-      <!-- Card 2: Login Breaks -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Login Breaks</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">Users can't sign up or log in, getting stuck in loops or seeing errors.</p>
-        </div>
-      </div>
-
-      <!-- Card 3: Payments Fail -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Payments Fail</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">Your Stripe connection doesn't work with real money, blocking all sales.</p>
-        </div>
-      </div>
-
-      <!-- Card 4: Data Glitches -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Data Glitches</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">Information won't save correctly, or the wrong data shows up for users.</p>
-        </div>
-      </div>
-
-      <!-- Card 5: Mysterious Bugs -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Mysterious Bugs</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">Things break for no clear reason, and there are no logs to tell you why.</p>
-        </div>
-      </div>
-      
-      <!-- Card 6: Can't FINISH -->
-      <div class="group relative bg-stone-50 p-6 rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-emerald-500 h-24 flex items-center justify-center">
-        <div class="transition-opacity duration-300 group-hover:opacity-0">
-          <p class="font-semibold text-stone-700">Can't Finish</p>
-        </div>
-        <div class="absolute inset-0 p-4 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <p class="text-white text-sm leading-tight">The main features are done, but you're stuck on the final details needed to go live.</p>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
-<!-- NEW: Who FINISH Is For -->
-<section class="container mx-auto px-6 py-20 md:py-24">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-stone-800">Built for founders who are almost there.</h2>
-      <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-4">
-        We’re the perfect partner if you have product-market fit, but your product isn’t fit for the market.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
-      <div class="bg-emerald-50 border border-emerald-200 p-8 rounded-lg">
-        <h3 class="text-2xl font-bold text-emerald-800 mb-3">FINISH is FOR you if…</h3>
-        <ul class="space-y-2 text-emerald-900">
-          <li class="flex items-start"><span class="mr-2 mt-1">✅</span>You have an app that's 70-90% complete.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">✅</span>You used an AI builder, no-code tool, or hired a dev who disappeared.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">✅</span>You need to launch, stabilize, or add a critical feature to start charging users.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">✅</span>You value speed and expertise over finding another cheap option.</li>
-        </ul>
-      </div>
-      <div class="bg-rose-50 border border-rose-200 p-8 rounded-lg">
-        <h3 class="text-2xl font-bold text-rose-800 mb-3">FINISH is NOT for you if…</h3>
-        <ul class="space-y-2 text-rose-900">
-          <li class="flex items-start"><span class="mr-2 mt-1">❌</span>You only have an idea and no code or prototype.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">❌</span>You're looking for a full-time CTO or a long-term agency retainer.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">❌</span>You need major new features designed and built from scratch.</li>
-          <li class="flex items-start"><span class="mr-2 mt-1">❌</span>Your primary goal is the lowest possible price.</li>
-        </ul>
-      </div>
-    </div>
-</section>
-
-
-<!-- How It Works -->
-<section class="bg-white py-20 md:py-24">
+<!-- 2) Social proof strip -->
+<section class="bg-slate-50/75 py-20">
   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-stone-800">How FINISH Works</h2>
-      <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-4">
-        A simple, transparent process built for speed, clarity, and launch.
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white border border-slate-200/60 rounded-2xl p-6">
+        <p class="text-slate-900 font-bold text-lg mb-1">Speed</p>
+        <p class="text-slate-600 text-sm">Get a quote in 24 hours. Ship in days, not months.</p>
+      </div>
+      <div class="bg-white border border-slate-200/60 rounded-2xl p-6">
+        <p class="text-slate-900 font-bold text-lg mb-1">Practical</p>
+        <p class="text-slate-600 text-sm">We fix what’s blocking launch. No “rebuild the whole thing” theater.</p>
+      </div>
+      <div class="bg-white border border-slate-200/60 rounded-2xl p-6">
+        <p class="text-slate-900 font-bold text-lg mb-1">Production-ready</p>
+        <p class="text-slate-600 text-sm">Deploy, auth, DB, payments, bugs, performance, polish, and handoff.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3) Who FINISH is for / NOT for -->
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Who FINISH is for</h2>
+      <p class="text-slate-600 mb-10 max-w-3xl">
+        Founders who already have something real and want it shipped. If your app is built but messy, broken, or stuck, you’re our people.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white border border-slate-200/60 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Perfect fit</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              You have a repo, a link, or a working prototype.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              You know the target user and what “done” means.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              You need deployment, fixes, missing features, or performance cleanup.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              You want a fast quote and a clear plan.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-slate-200/60 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Not a fit</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              “I have an idea, build the whole app for me.”
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              You want a long discovery phase or a 3-month redesign.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              You want ongoing retainer support or a fractional CTO.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              You need marketing, growth, or “make it go viral.”
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4) The Last Mile Is Broken (with hover explanations) -->
+<section class="bg-slate-50/75 py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">The Last Mile Is Broken</h2>
+      <p class="text-slate-600 mb-10 max-w-3xl">
+        Your app “works”… until it touches real users. Hover to see what each problem actually means.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">Auth is flaky</p>
+          <p class="text-slate-600 text-sm">Login works sometimes. That’s not a feature.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Users get stuck signing in, sessions expire, or roles don’t apply. We stabilize auth and protect routes.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">Data is messy</p>
+          <p class="text-slate-600 text-sm">Wrong records. Duplicate rows. Phantom bugs.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Schema issues, broken queries, bad state handling, or race conditions. We clean data flows and fix logic.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">Payments don’t ship</p>
+          <p class="text-slate-600 text-sm">Stripe setup exists… but nobody can pay.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Checkout fails, webhooks aren’t wired, receipts don’t send, or plans are unclear. We make it real.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">The UI feels “off”</p>
+          <p class="text-slate-600 text-sm">It technically works, but users bounce.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Spacing, states, validation, loading, and errors. We tighten the UX so it feels trustworthy.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">It’s slow</p>
+          <p class="text-slate-600 text-sm">Every click feels like dial-up.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Over-fetching, huge bundles, unindexed queries, or bad caching. We optimize and remove bottlenecks.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="group relative bg-white border border-slate-200/60 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <p class="text-slate-900 font-bold mb-1">Deployment is chaos</p>
+          <p class="text-slate-600 text-sm">“It works locally” is not a launch plan.</p>
+          <div class="pointer-events-none absolute left-6 right-6 top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <div class="bg-slate-900 text-white text-sm rounded-lg p-4 shadow-lg">
+              Env vars, builds, hosting, domains, HTTPS, and CI. We deploy cleanly and document the setup.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-slate-500 text-sm mt-8">
+        These are the “last 20%” problems. FINISH exists because this is where most AI-built apps die.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 text-center max-w-5xl mx-auto">
-      <div class="p-8">
-        <div class="text-3xl font-bold text-emerald-500 mb-4">1</div>
-        <h3 class="text-xl font-semibold text-stone-800 mb-3">Submit Your Diagnostic</h3>
-        <p class="text-stone-600">
-          Fill out our detailed form. Tell us what's broken, what "done" means, and show us the code.
-        </p>
+  </div>
+</section>
+
+<!-- 5) Examples of the “last 20%” we fix -->
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Real “last 20%” problems we fix</h2>
+      <p class="text-slate-600 mb-10 max-w-3xl">
+        Not theory. Not vibes. The stuff that blocks launch.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-slate-50/75 rounded-2xl p-6">
+          <p class="text-slate-900 font-bold mb-2">Missing core flows</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>Forgot password, email verification, role-based access</li>
+            <li>Admin panel, CRUD screens, settings, profile</li>
+            <li>Proper empty states, error states, loading states</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50/75 rounded-2xl p-6">
+          <p class="text-slate-900 font-bold mb-2">Payments and subscriptions</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>Stripe checkout, billing portal, plan gating</li>
+            <li>Webhooks, receipts, cancellations, upgrades</li>
+            <li>Test mode to live mode, edge cases handled</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50/75 rounded-2xl p-6">
+          <p class="text-slate-900 font-bold mb-2">Stability and bugs</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>Fix crashes, broken routes, bad state logic</li>
+            <li>API errors, rate limits, retries, validation</li>
+            <li>“Works on my machine” issues eliminated</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50/75 rounded-2xl p-6">
+          <p class="text-slate-900 font-bold mb-2">Deployment and production</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>Hosting, domains, SSL, env vars</li>
+            <li>CI, builds, monitoring, basic logging</li>
+            <li>Handoff docs so you’re not hostage later</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-8">
-        <div class="text-3xl font-bold text-emerald-500 mb-4">2</div>
-        <h3 class="text-xl font-semibold text-stone-800 mb-3">Get a Quote & Timeline</h3>
-        <p class="text-stone-600">
-          We analyze your app, map the last 20%, and give you a clear, fixed price to get you live.
-        </p>
+    </div>
+  </div>
+</section>
+
+<!-- 6) Micro case studies -->
+<section class="bg-slate-50/75 py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Micro case studies</h2>
+      <p class="text-slate-600 mb-10 max-w-3xl">
+        Short, real, and to the point. This is what “FINISH” looks like.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/60">
+          <p class="text-slate-900 font-bold mb-2">Founder A: “Checkout kept failing”</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>• Fixed Stripe flow + webhooks</li>
+            <li>• Added plan gating</li>
+            <li>• Deployed to production</li>
+          </ul>
+          <p class="text-slate-500 text-xs mt-4">Outcome: payments live, launch unblocked.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/60">
+          <p class="text-slate-900 font-bold mb-2">Founder B: “Users couldn’t sign in”</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>• Stabilized auth + sessions</li>
+            <li>• Added validation and error states</li>
+            <li>• Cleaned up routing edge cases</li>
+          </ul>
+          <p class="text-slate-500 text-xs mt-4">Outcome: onboarding works consistently.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/60">
+          <p class="text-slate-900 font-bold mb-2">Founder C: “It was slow and weird”</p>
+          <ul class="text-slate-700 text-sm space-y-2">
+            <li>• Reduced over-fetching</li>
+            <li>• Fixed performance bottlenecks</li>
+            <li>• Tightened UI states</li>
+          </ul>
+          <p class="text-slate-500 text-xs mt-4">Outcome: app feels fast and trustworthy.</p>
+        </div>
       </div>
-      <div class="p-8">
-        <div class="text-3xl font-bold text-emerald-500 mb-4">3</div>
-        <h3 class="text-xl font-semibold text-stone-800 mb-3">We Ship Your App</h3>
-        <p class="text-stone-600">
-          You get a fully functional, deployed application with payments wired and users able to sign up.
+    </div>
+  </div>
+</section>
+
+<!-- 7) What FINISH does & doesn’t do -->
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">What FINISH does & doesn’t do</h2>
+      <p class="text-slate-600 mb-10 max-w-3xl">
+        This is how we stay fast and keep quality high.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-50/75 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">We do</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              Diagnose and scope what’s blocking launch.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              Fix bugs, missing flows, auth, payments, data, performance.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-green-600 mr-2">✓</span>
+              Deploy to production and hand off cleanly.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50/75 rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-slate-900 mb-4">We don’t</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              Replace your entire product strategy.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              Build from zero with no repo, no prototype, no clarity.
+            </li>
+            <li class="flex items-start">
+              <span class="font-bold text-rose-600 mr-2">✗</span>
+              Do growth marketing, ads, SEO, or community management.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8) Fix My App Diagnostic Form (preview + button) -->
+<section class="bg-slate-50/75 py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Fix My App Diagnostic Form</h2>
+      <p class="text-slate-600 mb-8 max-w-3xl">
+        Don’t stress. This isn’t a test. It’s how we quote fast and avoid guesswork.
+      </p>
+
+      <div class="bg-white rounded-2xl p-8 border border-slate-200/60">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
+          <div class="space-y-2">
+            <p class="font-semibold text-slate-900">You’ll answer:</p>
+            <ul class="space-y-1">
+              <li>• What does your app do?</li>
+              <li>• Who is it for?</li>
+              <li>• What tech stack or AI builder was used?</li>
+              <li>• What’s broken or missing?</li>
+              <li>• What have you tried so far?</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <p class="font-semibold text-slate-900">You’ll include:</p>
+            <ul class="space-y-1">
+              <li>• Link to repo</li>
+              <li>• Link to Loom demo</li>
+              <li>• Timeline / urgency</li>
+              <li>• What success looks like</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            routerLink="/intake"
+            class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg inline-block transition-transform hover:scale-105"
+          >
+            Start my diagnostic
+          </a>
+          <a
+            routerLink="/pricing"
+            class="bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 rounded-lg inline-block border border-slate-200"
+          >
+            See pricing
+          </a>
+        </div>
+
+        <p class="text-slate-500 text-xs mt-4">
+          Pro tip: a 2–3 minute Loom demo makes your quote faster and more accurate.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NEW: Micro Case Studies -->
-<section class="container mx-auto px-6 py-20 md:py-24">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-stone-800">From Broken to Shipped. Fast.</h2>
-      <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-4">
-        Real-world examples of the last 20% problems we fix every day.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">The Login Loop Nightmare</h3>
-            <p class="text-sm text-stone-600 mb-3">A Bubble app's login flow worked in dev but looped endlessly in production. The founder was stuck without logs.</p>
-            <p class="font-semibold text-emerald-700 text-sm"><strong>FINISH Solution:</strong> Rewired the auth flow, fixed token persistence, and deployed a stable version in under 48 hours.</p>
-        </div>
-        <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">Stripe Refused To Connect</h3>
-            <p class="text-sm text-stone-600 mb-3">A custom app's Stripe integration failed with cryptic errors because a plugin's API was outdated.</p>
-            <p class="font-semibold text-emerald-700 text-sm"><strong>FINISH Solution:</strong> Rebuilt the payment flow with direct API calls and pushed a working checkout to production.</p>
-        </div>
-        <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">Everything Broke In Production</h3>
-            <p class="text-sm text-stone-600 mb-3">A React app ran perfectly locally but half the pages failed to load on Vercel with no clear errors.</p>
-            <p class="font-semibold text-emerald-700 text-sm"><strong>FINISH Solution:</strong> Diagnosed environment variable conflicts, fixed state hydration, and deployed a stable build.</p>
-        </div>
-    </div>
-</section>
-
-<!-- NEW: What FINISH Does & Doesn't Do -->
-<section class="bg-white py-20 md:py-24">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-stone-800">What We Do & What We Don’t</h2>
-            <p class="text-lg text-stone-600 max-w-2xl mx-auto mt-4">
-                We are not a traditional agency. We are a rapid-deployment service for existing apps.
-            </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="p-8 rounded-lg bg-stone-50">
-                <h3 class="font-semibold text-stone-800 text-xl mb-3">What FINISH Does:</h3>
-                <ul class="space-y-2 text-stone-700">
-                    <li class="flex items-start"><span class="font-bold text-green-600 mr-2">✓</span>Fixes broken features (auth, payments, data).</li>
-                    <li class="flex items-start"><span class="font-bold text-green-600 mr-2">✓</span>Stabilizes and deploys existing apps.</li>
-                    <li class="flex items-start"><span class="font-bold text-green-600 mr-2">✓</span>Adds small, critical features to unlock revenue.</li>
-                    <li class="flex items-start"><span class="font-bold text-green-600 mr-2">✓</span>Writes clean, production-ready code.</li>
-                </ul>
-            </div>
-            <div class="p-8 rounded-lg bg-stone-50">
-                <h3 class="font-semibold text-stone-800 text-xl mb-3">What FINISH Doesn't Do:</h3>
-                <ul class="space-y-2 text-stone-700">
-                    <li class="flex items-start"><span class="font-bold text-rose-600 mr-2">✗</span>Build apps from just an idea.</li>
-                    <li class="flex items-start"><span class="font-bold text-rose-600 mr-2">✗</span>Design UI/UX from scratch.</li>
-                    <li class="flex items-start"><span class="font-bold text-rose-600 mr-2">✗</span>Offer long-term retainers or act as your CTO.</li>
-                    <li class="flex items-start"><span class="font-bold text-rose-600 mr-2">✗</span>Market or grow your app after launch.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- NEW: Diagnostic Form & High-Conversion CTA -->
-<section class="bg-stone-900 text-white py-20">
+<!-- 9) Final CTA -->
+<section class="bg-slate-900 text-white py-24">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-6">Get a 24-Hour Turnaround Quote</h2>
-    <p class="text-stone-300 mb-8 max-w-2xl mx-auto">
-      To give you a fast, accurate quote, we need a clear diagnostic. Be ready to answer these questions on the next page.
+    <h2 class="text-4xl font-bold mb-6">Get a 24-hour turnaround quote</h2>
+    <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
+      If your app is built and you want it shipped, this is your next step.
     </p>
-    
-    <div class="max-w-xl mx-auto text-left bg-stone-800 p-6 rounded-lg text-stone-300 text-sm mb-8">
-        <ul class="list-disc list-inside space-y-2">
-            <li>What does your app do and who is it for?</li>
-            <li>What tech stack or AI builder was used?</li>
-            <li>What’s broken or missing? What have you tried?</li>
-            <li>Link to your repo and a quick Loom demo.</li>
-            <li>What does a successful FINISH look like?</li>
-        </ul>
-    </div>
 
     <a
       routerLink="/intake"
       class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-transform hover:scale-105"
     >
-      Start My Diagnostic
+      Start my diagnostic
     </a>
+
+    <p class="text-slate-400 text-sm mt-6">
+      FINISH. Prototype in. Business out.
+    </p>
   </div>
 </section>
