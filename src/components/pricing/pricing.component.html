@@ -1,122 +1,168 @@
-<div class="container mx-auto px-6 py-24">
-  <!-- 1. Intro Section -->
-  <div class="max-w-3xl mx-auto">
-      <div>
-        <h1 class="text-4xl font-bold text-slate-800 mb-4">Pricing built for founders</h1>
-        <p class="text-slate-600 mb-16">
-          Choose the path that fits your build. Fix it yourself with expert support, let us stabilize it, or have us fully rebuild it and get it production-ready.
-        </p>
-      </div>
-  </div>
-
-  <!-- 2. "Why this matters" section -->
-  <div class="max-w-5xl mx-auto">
-    <div class="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-700">
-      <div>
-        <h3 class="font-semibold mb-2 text-slate-900">Transparent pricing</h3>
-        <p>No hidden fees. No weird agency retainers.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-slate-900">Fast turnaround</h3>
-        <p>Most projects ship in 24–72 hours.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-slate-900">Done-for-you expertise</h3>
-        <p>We fix what AI builders can’t finish.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. Pricing Cards -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-
-    <!-- Tier 1: DIY Fix Call -->
-    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col">
-      <h2 class="text-2xl font-semibold text-slate-800">DIY Fix Call</h2>
-      <p class="text-4xl font-bold text-slate-800 my-6">$299/hr</p>
-      <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>60-minute debugging call</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Targeted fixes during the call</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Clear next steps to ship</li>
-      </ul>
-      <a routerLink="/intake"
-         class="mt-auto w-full text-center bg-slate-100 text-slate-800 font-semibold py-3 px-4 rounded-lg hover:bg-slate-200 transition-all">
-        Fix My App
-      </a>
-    </div>
-
-    <!-- Tier 2: Basic -->
-    <div class="bg-white p-8 rounded-2xl shadow-md border-2 border-green-500 flex flex-col relative">
-      <p class="absolute top-0 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-        MOST POPULAR
+<!-- 1. Hero Section -->
+<div class="bg-slate-50/75">
+  <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tighter mb-4 animate-fadeInUp">
+        Get Your App Unstuck and Live
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 mb-6 max-w-2xl mx-auto animate-fadeInUp" style="animation-delay: 100ms;">
+        Fixed-price packages to take your app from prototype to production.
       </p>
-      <h2 class="text-2xl font-semibold text-slate-800">Basic</h2>
-      <p class="text-4xl font-bold text-slate-800 my-6">Starting at $995</p>
-      <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>We fix the broken parts</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Stabilize the app so it runs without errors</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Light improvements included</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Delivered in 24–72 hours</li>
-      </ul>
-      <a routerLink="/intake"
-         class="mt-auto w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg">
-        Fix My App
-      </a>
-    </div>
-
-    <!-- Tier 3: Premium -->
-    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col">
-      <h2 class="text-2xl font-semibold text-slate-800">Premium</h2>
-      <p class="text-4xl font-bold text-slate-800 my-6">$2,995+</p>
-      <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Complete rebuild or deep repair</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Full stability + performance pass</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Auth, payments, deployment handled end-to-end</li>
-        <li class="flex items-center"><span class="w-5 h-5 text-green-500 mr-2">✔</span>Delivered production-ready</li>
-      </ul>
-      <a routerLink="/intake"
-         class="mt-auto w-full text-center bg-slate-100 text-slate-800 font-semibold py-3 px-4 rounded-lg hover:bg-slate-200 transition-all">
-        Fix My App
-      </a>
-    </div>
-
-  </div>
-
-  <!-- 4. Payment Flexibility Section -->
-  <div class="max-w-5xl mx-auto mt-32">
-    <div>
-      <h2 class="text-2xl font-bold text-slate-800 mb-4">Payment flexibility</h2>
-      <p class="text-slate-600 mb-8 max-w-2xl">
-        Want to pay less upfront? We offer a reduced rate with a success fee: pay 50% now and FINISH takes a commission on revenue or transactions until the project cost is met.
+      <p class="text-lg md:text-xl text-slate-800 font-semibold animate-fadeInUp" style="animation-delay: 200ms;">
+        You built it. We ship it.
       </p>
     </div>
+  </div>
+</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700 mb-16">
-      <div class="p-6 border rounded-2xl bg-slate-50/75 border-slate-200">
-        <h3 class="font-semibold text-slate-900 mb-2">Standard Pricing</h3>
-        <ul class="list-disc ml-4 space-y-1 text-sm">
-          <li>Full fee upfront</li>
-          <li>No revenue share</li>
-          <li>Best for founders ready to ship immediately</li>
-        </ul>
+<!-- 2. Pricing Cards -->
+<div class="py-24">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
+      
+      <!-- Tier 1: DIY Fix Call -->
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col relative">
+        <p class="absolute top-0 -translate-y-1/2 bg-green-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">MOST POPULAR</p>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-2">🔥 DIY Fix Call</h3>
+        <p class="text-lg text-slate-600 mb-4 font-medium">— Fastest Way to Unblock Yourself</p>
+        <p class="text-4xl font-bold text-slate-900 mb-2">$299<span class="text-lg font-medium text-slate-500"> / hour</span></p>
+        <p class="text-sm text-slate-500 mt-1 mb-6">For founders who need one specific problem solved right now.</p>
+        
+        <div class="text-left mb-8 flex-grow">
+            <p class="font-semibold text-slate-700">What you get:</p>
+            <ul class="mt-2 space-y-2 text-slate-600 text-sm list-disc list-inside">
+              <li>60-minute 1-on-1 screenshare</li>
+              <li>Live debugging & code fixes</li>
+              <li>Recording of the call</li>
+            </ul>
+        </div>
+        
+        <p class="text-sm text-slate-500 italic mb-6"><strong>Best for:</strong> Builders who need expert eyes to break through one wall.</p>
+        <a routerLink="/intake" class="mt-auto w-full text-center bg-slate-100 text-slate-800 font-semibold py-3 px-4 rounded-lg hover:bg-slate-200 transition-all">
+          Fix My App
+        </a>
       </div>
 
-      <div class="p-6 border rounded-2xl bg-slate-50/75 border-slate-200">
-        <h3 class="font-semibold text-slate-900 mb-2">Success-Fee Option</h3>
-        <ul class="list-disc ml-4 space-y-1 text-sm">
-          <li>50% upfront</li>
-          <li>Revenue or transaction commission until paid</li>
-          <li>Best for early-stage founders or pre-revenue apps</li>
-        </ul>
+      <!-- Tier 2: Stabilize & Ship -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-600 flex flex-col relative">
+        <p class="absolute top-0 -translate-y-1/2 bg-green-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">MOST POPULAR</p>
+        <h3 class="text-2xl font-semibold text-slate-800 mb-2">✅ Stabilize & Ship</h3>
+        <p class="text-lg text-slate-600 mb-4 font-medium">— Launch Without a Rebuild</p>
+        <p class="text-4xl font-bold text-slate-900 mb-2">Starting at $995</p>
+        <p class="text-sm text-slate-500 mt-1 mb-6">We make your app stable, usable, and production-ready.</p>
+        
+        <div class="text-left mb-8 flex-grow">
+            <p class="font-semibold text-slate-700">What we fix:</p>
+            <ul class="mt-2 space-y-2 text-slate-600 text-sm list-disc list-inside">
+                <li>Critical bugs, crashes & login flows</li>
+                <li>Data and core feature stability</li>
+                <li>Basic production deployment</li>
+            </ul>
+        </div>
+        <p class="text-sm text-slate-500 mb-2"><strong class="italic">Timeline:</strong> 5–10 business days after review.</p>
+        <p class="text-sm text-slate-500 italic mb-6"><strong>Best for:</strong> Founders who are close, but not confident enough to launch.</p>
+        <a routerLink="/intake" class="mt-auto w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg">
+          Fix My App
+        </a>
+      </div>
+
+      <!-- Tier 3: Production-Ready Rebuild -->
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col">
+        <h3 class="text-2xl font-semibold text-slate-800 mb-2">🚀 Production-Ready Rebuild</h3>
+        <p class="text-lg text-slate-600 mb-4 font-medium">— When the Prototype Is Too Messy</p>
+        <p class="text-4xl font-bold text-slate-900 mb-6">Starting at $2,995+</p>
+        <p class="text-sm text-slate-500 mb-6">When your prototype is fragile, we rebuild critical parts to make it scalable.</p>
+        <div class="text-left mb-8 flex-grow">
+            <p class="font-semibold text-slate-700">Includes:</p>
+            <ul class="mt-2 space-y-2 text-slate-600 text-sm list-disc list-inside">
+                <li>Architecture cleanup & feature refactors</li>
+                <li>Performance and stability improvements</li>
+                <li>Production deployment & handoff</li>
+            </ul>
+        </div>
+        <p class="text-sm text-slate-500 italic mb-6"><strong>Best for:</strong> Apps that need more than patching to survive real users.</p>
+        <a routerLink="/intake" class="mt-auto w-full text-center bg-slate-100 text-slate-800 font-semibold py-3 px-4 rounded-lg hover:bg-slate-200 transition-all">
+          Fix My App
+        </a>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- 5. Final CTA -->
-  <div class="text-center mt-24">
-    <a routerLink="/intake" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg">
-      Fix My App
-    </a>
+<!-- 3. Other Info Sections -->
+<div class="bg-slate-50/75 py-24 md:py-32">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto space-y-24">
+      
+      <!-- Which Should I Choose? -->
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">🤔 Which Should I Choose?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <!-- Tile 1 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200/60">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+              <p class="font-semibold text-slate-800">Payments failing?</p>
+              <p class="text-slate-600 mt-1 text-sm">→ DIY Fix Call</p>
+          </div>
+          <!-- Tile 2 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200/60">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944L12 22l9-1.056A12.02 12.02 0 0021 12.382a11.955 11.955 0 01-4.382-3.398z" />
+              </svg>
+              <p class="font-semibold text-slate-800">Ready to launch but unstable?</p>
+              <p class="text-slate-600 mt-1 text-sm">→ Stabilize & Ship</p>
+          </div>
+          <!-- Tile 3 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200/60">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+              <p class="font-semibold text-slate-800">Prototype is messy/slow?</p>
+              <p class="text-slate-600 mt-1 text-sm">→ Production-Ready Rebuild</p>
+          </div>
+        </div>
+        <p class="text-center mt-8 text-slate-600">If you’re unsure, pick <strong class="text-slate-800">Stabilize & Ship</strong>. We’ll tell you if you need less.</p>
+      </div>
+
+      <!-- How This Works -->
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">🔒 How This Works</h2>
+        <ol class="space-y-4 list-decimal list-inside text-slate-600 text-lg text-center">
+            <li>Click Fix My App and submit your app</li>
+            <li>We review and confirm scope and timeline</li>
+            <li>You approve and we start work</li>
+        </ol>
+        <p class="text-center mt-6 text-slate-500">No surprise invoices. No endless back-and-forth.</p>
+      </div>
+
+      <!-- Straight Talk on Risk -->
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">🛡️ Straight Talk on Risk</h2>
+        <div class="text-center bg-green-50 p-8 rounded-2xl border border-green-200 max-w-2xl mx-auto">
+          <ul class="space-y-3 text-green-800">
+            <li>✓ You always get clear scope before paying</li>
+            <li>✓ If your app needs more than expected, we tell you first</li>
+            <li>✓ You keep full ownership of your code and product</li>
+            <li>✓ If we can’t help, we won’t take your money</li>
+          </ul>
+        </div>
+        <p class="text-center mt-8 text-xl font-semibold text-slate-800">We don’t sell dreams. We ship working software.</p>
+      </div>
+    </div>
   </div>
+</div>
 
+<!-- 4. Final CTA -->
+<div class="py-24">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-slate-900 mb-6">Ready to move forward?</h2>
+      <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto">Your app doesn’t need to be perfect.<br>It just needs to launch.</p>
+      <a routerLink="/intake" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-transform hover:scale-105">
+        Fix My App
+      </a>
+    </div>
+  </div>
 </div>
