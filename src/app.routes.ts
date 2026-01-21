@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { LaunchComponent } from './components/launch/launch.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { IntakeComponent } from './components/intake/intake.component';
 import { AboutComponent } from './components/about/about.component';
@@ -10,6 +11,7 @@ import { PartnersComponent } from './components/partners/partners.component';
 
 export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'launch', component: LaunchComponent },
   { path: 'pricing', component: PricingComponent },
   { path: 'intake', component: IntakeComponent },
   { path: 'why-finish', component: AboutComponent },

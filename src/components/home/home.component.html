@@ -6,16 +6,21 @@
     </p>
 
     <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight tracking-tighter mb-6">
-      Your App. Actually Finished.
+      {{ heroHeadline }}
     </h1>
 
-    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl">
-      We take AI-built, no-code, or custom apps stuck at 80% and ship them to production, often in 24–72 hours.
+    <p class="text-lg md:text-xl text-slate-600 mb-6 max-w-2xl">
+      {{ heroSubhead }}
     </p>
+
+    <ul *ngIf="problemBullets.length" class="list-disc pl-6 text-slate-700 mb-6 max-w-2xl">
+      <li *ngFor="let b of problemBullets">{{ b }}</li>
+    </ul>
 
     <div class="flex flex-col sm:flex-row gap-4">
       <a
         routerLink="/intake"
+        (click)="trackCTA('hero_get_quote')"
         class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-transform hover:scale-105"
       >
         Get a 24-hour turnaround quote
@@ -375,6 +380,7 @@
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
           <a
             routerLink="/intake"
+            (click)="trackCTA('diagnostic_start')"
             class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg inline-block transition-transform hover:scale-105"
           >
             Start my diagnostic
@@ -405,6 +411,7 @@
 
     <a
       routerLink="/intake"
+      (click)="trackCTA('final_start_diagnostic')"
       class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-transform hover:scale-105"
     >
       Start my diagnostic

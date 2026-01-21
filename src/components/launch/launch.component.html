@@ -1,0 +1,115 @@
+<section class="launch-hero container mx-auto px-6 py-24 md:py-40">
+  <div class="max-w-3xl mx-auto">
+    <!-- Variant badge (subtle) -->
+    <div class="variant-badge mb-6 inline-block">
+      <span class="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">
+        {{ currentVariant === 'default' ? 'Standard' : currentVariant | titlecase }} Path
+      </span>
+    </div>
+
+    <!-- Hero headline with fade-in animation -->
+    <h1 class="hero-headline text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight tracking-tighter mb-6">
+      {{ heroHeadline }}
+    </h1>
+
+    <!-- Hero subhead with slide-up animation -->
+    <p class="hero-subhead text-lg md:text-xl text-slate-600 mb-8 max-w-2xl">
+      {{ heroSubhead }}
+    </p>
+
+    <!-- Problem bullets with stagger animation -->
+    <ul class="problem-bullets list-disc pl-6 text-slate-700 mb-8 max-w-2xl space-y-3">
+      <li *ngFor="let bullet of problemBullets; let i = index" [style.animation-delay]="(i * 100) + 'ms'">
+        {{ bullet }}
+      </li>
+    </ul>
+
+    <!-- CTA buttons with hover effects -->
+    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+      <a
+        routerLink="/intake"
+        (click)="trackCTA('cta_click_primary')"
+        class="cta-primary bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block transition-all hover:scale-105 hover:shadow-lg"
+      >
+        {{ ctaText }}
+      </a>
+      <a
+        routerLink="/how-it-works"
+        (click)="trackCTA('cta_click_secondary')"
+        class="cta-secondary bg-white hover:bg-slate-50 text-slate-700 font-semibold px-8 py-4 rounded-lg text-lg inline-block border border-slate-200 transition-all hover:border-slate-300 hover:shadow-md"
+      >
+        See How It Works
+      </a>
+    </div>
+
+    <p class="text-sm text-slate-500">
+      If you have a repo or a link and a clear goal, we can move fast.
+    </p>
+  </div>
+</section>
+
+<!-- Social Proof Section -->
+<section class="bg-slate-50/75 py-16 md:py-20 social-proof">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div class="proof-card bg-white border border-slate-200/60 rounded-2xl p-6 transition-all hover:shadow-md hover:border-slate-300">
+        <p class="text-slate-900 font-bold text-lg mb-2">⚡ Speed</p>
+        <p class="text-slate-600 text-sm">Quote in 24 hours. Ship in days, not months.</p>
+      </div>
+      <div class="proof-card bg-white border border-slate-200/60 rounded-2xl p-6 transition-all hover:shadow-md hover:border-slate-300">
+        <p class="text-slate-900 font-bold text-lg mb-2">🎯 Results</p>
+        <p class="text-slate-600 text-sm">80% → Production. Fully tested and deployed.</p>
+      </div>
+      <div class="proof-card bg-white border border-slate-200/60 rounded-2xl p-6 transition-all hover:shadow-md hover:border-slate-300">
+        <p class="text-slate-900 font-bold text-lg mb-2">🤝 Reliable</p>
+        <p class="text-slate-600 text-sm">Dedicated team. Transparent process. Done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Teaser -->
+<section class="container mx-auto px-6 py-16 md:py-24">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Questions? We've Heard Them.</h2>
+    <div class="space-y-4">
+      <div class="faq-item bg-slate-50 p-6 rounded-lg border border-slate-200 transition-all hover:bg-slate-100 hover:border-slate-300">
+        <p class="font-semibold text-slate-900">How fast can you really move?</p>
+        <p class="text-slate-600 text-sm mt-2">We quote in 24 hours. Most projects ship in 3–7 days, some in 24–72 hours.</p>
+      </div>
+      <div class="faq-item bg-slate-50 p-6 rounded-lg border border-slate-200 transition-all hover:bg-slate-100 hover:border-slate-300">
+        <p class="font-semibold text-slate-900">What if I'm not ready?</p>
+        <p class="text-slate-600 text-sm mt-2">We handle code, no-code, repos, or links. You give us a goal; we make it ship.</p>
+      </div>
+      <div class="faq-item bg-slate-50 p-6 rounded-lg border border-slate-200 transition-all hover:bg-slate-100 hover:border-slate-300">
+        <p class="font-semibold text-slate-900">What about quality?</p>
+        <p class="text-slate-600 text-sm mt-2">Production-ready. Tests, docs, and deployments included. Zero half-done work.</p>
+      </div>
+    </div>
+    <a
+      routerLink="/faq"
+      class="text-green-600 hover:text-green-700 font-semibold mt-8 inline-block transition-colors"
+    >
+      Read Full FAQ →
+    </a>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-gradient-to-r from-green-50 to-slate-50 py-16 md:py-24 border-t border-slate-200">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Ready to Ship?</h2>
+      <p class="text-lg text-slate-600 mb-8">
+        Tell us your goal. We'll quote you fast and get to work.
+      </p>
+      <a
+        routerLink="/intake"
+        (click)="trackCTA('cta_click_final')"
+        class="cta-final bg-green-600 hover:bg-green-700 text-white font-semibold px-10 py-5 rounded-lg text-lg inline-block transition-all hover:scale-105 hover:shadow-lg"
+      >
+        Start Your Project
+      </a>
+    </div>
+  </div>
+</section>
